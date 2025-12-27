@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -20,7 +20,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="font-sans text-slate-300 bg-deepNavy min-h-screen flex flex-col selection:bg-bioCyan selection:text-deepNavy">
         <ScrollToTop />
         <Navbar />
@@ -36,7 +36,7 @@ function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
