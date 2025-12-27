@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ICBMB 2025 | International Conference on Biochemistry & Molecular Biology</title>
-    <meta name="description" content="Advancing Molecular Research for Human Health & Biotechnology Innovation. Join us in Bandung, September 2025." />
+    <title>FAOBMB 2028 | 33rd Federation of Asian & Oceanian Biochemists and Molecular Biologists Conference</title>
+    <meta name="description" content="Breaking New Grounds on Disease Mechanism in the Post-Pandemic Era. Join us in Ubud, Bali, Indonesia, September 2028." />
     
     <!-- Fonts: Inter for UI, Roboto Slab for Headings (Academic feel) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +14,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              scienceBlue: '#3B82F6', /* Lighter blue for dark mode contrast */
-              bioCyan: '#22D3EE', /* Cyan-400 for glow */
-              deepNavy: '#050A1F', /* Dark background like reference */
+              scienceBlue: '#3B82F6', 
+              bioCyan: '#22D3EE', 
+              deepNavy: '#050A1F', 
               cardNavy: '#0F172A',
-              labWhite: '#E5F6F8',
+              labWhite: '#F1F5F9',
               softGray: '#F8FAFC',
             },
             fontFamily: {
@@ -31,6 +32,7 @@
             backgroundImage: {
               'glow-conic': 'conic-gradient(from 180deg at 50% 50%, #2a8af6 0deg, #a853ba 180deg, #e92a67 360deg)',
               'grid-pattern': "linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
+              'grid-pattern-light': "linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px)",
             }
           },
         },
@@ -42,10 +44,10 @@
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #050A1F;
+        @apply bg-slate-100 dark:bg-[#050A1F];
       }
       ::-webkit-scrollbar-thumb {
-        background: #1e293b;
+        @apply bg-slate-300 dark:bg-[#1e293b];
         border-radius: 5px;
       }
       ::-webkit-scrollbar-thumb:hover {
@@ -53,11 +55,9 @@
       }
       
       .glass-card {
-        background: rgba(15, 23, 42, 0.6);
+        @apply bg-white/80 dark:bg-[#0F172A]/60 border border-slate-200 dark:border-white/10 shadow-lg dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       }
       
       .text-glow {
@@ -65,8 +65,7 @@
       }
 
       body {
-        background-color: #050A1F;
-        color: #e2e8f0;
+        @apply bg-softGray dark:bg-deepNavy text-slate-800 dark:text-[#e2e8f0] transition-colors duration-300;
       }
     </style>
   <script type="importmap">

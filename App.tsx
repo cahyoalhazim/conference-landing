@@ -21,7 +21,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <HashRouter>
-      <div className="font-sans text-slate-300 bg-deepNavy min-h-screen flex flex-col selection:bg-bioCyan selection:text-deepNavy">
+      <div className="font-sans text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-deepNavy min-h-screen flex flex-col selection:bg-scienceBlue dark:selection:bg-bioCyan selection:text-white dark:selection:text-deepNavy transition-colors duration-300">
         <ScrollToTop />
         <Navbar />
         <main className="flex-grow">
