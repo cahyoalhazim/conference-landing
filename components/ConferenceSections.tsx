@@ -10,7 +10,7 @@ import {
   MapPin, Clock,
   BookOpen, Award, Users, Download, Brain, Sprout
 } from 'lucide-react';
-import { Topic, TimelineEvent, Speaker, PricingTier } from '../types.ts';
+import { Topic, TimelineEvent, Speaker, PricingTier } from '../types';
 
 // --- DATA ---
 const topics: Topic[] = [

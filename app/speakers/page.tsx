@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { SpeakersSection, Footer } from '../../components/ConferenceSections.tsx';
+import { SpeakersSection, Footer } from '../../components/ConferenceSections';
 
 // Additional invited speakers data
 const invitedSpeakers = [

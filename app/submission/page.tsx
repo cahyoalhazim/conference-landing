@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubmissionFlow, Footer } from '../../components/ConferenceSections.tsx';
+import { SubmissionFlow, Footer } from '../../components/ConferenceSections';
 import { Upload, FileText } from 'lucide-react';
 
 export default function Submission() {

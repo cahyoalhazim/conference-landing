@@ -1,5 +1,5 @@
 import React from 'react';
-import { PricingSection, Footer } from '../../components/ConferenceSections.tsx';
+import { PricingSection, Footer } from '../../components/ConferenceSections';
 import { CreditCard, Lock } from 'lucide-react';
 
 export default function Registration() {

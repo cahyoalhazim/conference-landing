@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimelineSection, Footer } from '../../components/ConferenceSections.tsx';
+import { TimelineSection, Footer } from '../../components/ConferenceSections';
 import { Clock, MapPin } from 'lucide-react';
 
 const scheduleData = [

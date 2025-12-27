@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Dna, Sun, Moon } from 'lucide-react';
-import { NavItem } from '../types.ts';
+import { NavItem } from '../types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

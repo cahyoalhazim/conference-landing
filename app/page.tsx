@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero.tsx';
+import Hero from '../components/Hero';
 import { 
   AboutSection, 
   ScopesSection, 
@@ -10,7 +10,7 @@ import {
   TargetAudienceSection,
   CallForPapersSection,
   SponsorsSection 
-} from '../components/ConferenceSections.tsx';
+} from '../components/ConferenceSections';
 
 export default function Home() {
   return (

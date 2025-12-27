@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutSection, ScopesSection, Footer } from '../../components/ConferenceSections.tsx';
+import { AboutSection, ScopesSection, Footer } from '../../components/ConferenceSections';
 
 const committee = [
     { role: "Conference Chair", name: "Prof. Dr. Rina Wijaya", affiliation: "Institut Teknologi Bandung" },
