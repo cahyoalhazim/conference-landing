@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { VenueSection, Footer } from '../../components/ConferenceSections.tsx';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';

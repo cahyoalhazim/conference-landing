@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, MapPin, FileText } from 'lucide-react';
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
   return (
@@ -88,10 +91,10 @@ const Hero: React.FC = () => {
                     <p className="text-sm text-slate-800 dark:text-white font-medium">12–15 September 2028</p>
                   </div>
                </div>
-               <a href="/submission" className="bg-scienceBlue hover:bg-blue-600 dark:hover:bg-bioCyan text-white px-8 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-scienceBlue/30">
+               <Link href="/submission" className="bg-scienceBlue hover:bg-blue-600 dark:hover:bg-bioCyan text-white px-8 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-scienceBlue/30">
                   Submit Abstract
                   <ArrowRight size={18} />
-               </a>
+               </Link>
             </div>
           </motion.div>
         </div>
@@ -147,9 +150,9 @@ const Hero: React.FC = () => {
               </div>
 
               {/* CTA Link */}
-              <div className="relative z-10 flex items-center justify-center gap-1.5 text-scienceBlue dark:text-bioCyan text-sm font-bold group-hover:gap-2.5 transition-all cursor-pointer">
+              <Link href="/submission" className="relative z-10 flex items-center justify-center gap-1.5 text-scienceBlue dark:text-bioCyan text-sm font-bold group-hover:gap-2.5 transition-all cursor-pointer">
                   Submit Abstract <ArrowRight size={16} />
-              </div>
+              </Link>
            </motion.div>
 
            {/* Card 3: Keynote */}

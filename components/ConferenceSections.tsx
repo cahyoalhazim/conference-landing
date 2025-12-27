@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Dna, Microscope, Activity, Boxes, 
   FileText, CheckCircle, 
@@ -416,9 +418,9 @@ export const Footer: React.FC = () => (
         <div>
           <h4 className="font-bold mb-6 text-slate-900 dark:text-white">Quick Links</h4>
           <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li><Link to="/about" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">About</Link></li>
-            <li><Link to="/speakers" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Confirmed Speakers</Link></li>
-            <li><Link to="/registration" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Registration</Link></li>
+            <li><Link href="/about" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">About</Link></li>
+            <li><Link href="/speakers" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Confirmed Speakers</Link></li>
+            <li><Link href="/registration" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Registration</Link></li>
           </ul>
         </div>
 

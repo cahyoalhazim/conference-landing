@@ -1,7 +1,10 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Dna, Sun, Moon } from 'lucide-react';
 import { NavItem } from '../types.ts';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
@@ -16,7 +19,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     // Check local storage or system preference on mount
@@ -51,8 +54,8 @@ const Navbar: React.FC = () => {
   };
 
   const isActive = (path: string) => {
-    if (path === '/' && location.pathname !== '/') return false;
-    return location.pathname.startsWith(path);
+    if (path === '/' && pathname !== '/') return false;
+    return pathname.startsWith(path);
   };
 
   const getNavBackground = () => {
@@ -68,7 +71,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="bg-gradient-to-tr from-red-600 to-scienceBlue p-2 rounded-xl text-white shadow-[0_0_15px_rgba(59,130,246,0.5)] group-hover:scale-105 transition-transform">
             <Dna size={24} />
           </div>
@@ -83,7 +86,7 @@ const Navbar: React.FC = () => {
           {navItems.map((item) => (
             <Link
               key={item.label}
-              to={item.href}
+              href={item.href}
               className={`text-sm font-medium transition-colors hover:text-scienceBlue dark:hover:text-bioCyan ${
                 isActive(item.href) 
                   ? 'text-scienceBlue dark:text-bioCyan' 
@@ -105,7 +108,7 @@ const Navbar: React.FC = () => {
           </button>
 
           <Link
-            to="/registration"
+            href="/registration"
             className="px-6 py-2.5 rounded-full bg-scienceBlue text-white text-sm font-semibold hover:bg-blue-600 dark:hover:bg-bioCyan hover:shadow-lg transition-all"
           >
             Register Now
@@ -137,7 +140,7 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <Link
                 key={item.label}
-                to={item.href}
+                href={item.href}
                 className={`text-lg font-medium hover:text-scienceBlue dark:hover:text-bioCyan ${
                   isActive(item.href) ? 'text-scienceBlue dark:text-bioCyan' : 'text-slate-800 dark:text-slate-300'
                 }`}
@@ -147,7 +150,7 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
             <Link
-              to="/registration"
+              href="/registration"
               className="w-full text-center px-5 py-3 rounded-lg bg-scienceBlue text-white font-semibold shadow-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { SpeakersSection, Footer } from '../../components/ConferenceSections.tsx';
 
 // Additional invited speakers data
@@ -49,7 +50,7 @@ export default function Speakers() {
          <div className="glass-card rounded-3xl p-10 max-w-3xl mx-auto border-dashed border-2 border-slate-300 dark:border-white/20 bg-white/80 dark:bg-white/5">
              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Call for Workshop Proposals</h3>
              <p className="text-slate-600 dark:text-slate-400 mb-6">Interested in organizing a half-day workshop? Submit your proposal by June 30.</p>
-             <a href="/contact" className="px-8 py-3 bg-scienceBlue text-white rounded-xl font-bold hover:bg-blue-600 dark:hover:bg-bioCyan transition-colors">Submit Proposal</a>
+             <Link href="/contact" className="px-8 py-3 bg-scienceBlue text-white rounded-xl font-bold hover:bg-blue-600 dark:hover:bg-bioCyan transition-colors">Submit Proposal</Link>
          </div>
       </div>
       <Footer />
