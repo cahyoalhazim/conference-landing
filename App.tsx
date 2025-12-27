@@ -1,28 +1,20 @@
-import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Speakers from './pages/Speakers';
-import Schedule from './pages/Schedule';
-import Submission from './pages/Submission';
-import Registration from './pages/Registration';
-import Contact from './pages/Contact';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar.tsx';
 
-// Scroll to top on route change
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
+// Import pages from the app directory structure with explicit extensions
+import Home from './app/page.tsx';
+import About from './app/about/page.tsx';
+import Speakers from './app/speakers/page.tsx';
+import Schedule from './app/schedule/page.tsx';
+import Submission from './app/submission/page.tsx';
+import Registration from './app/registration/page.tsx';
+import Contact from './app/contact/page.tsx';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <HashRouter>
-      <div className="font-sans text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-deepNavy min-h-screen flex flex-col selection:bg-scienceBlue dark:selection:bg-bioCyan selection:text-white dark:selection:text-deepNavy transition-colors duration-300">
-        <ScrollToTop />
+    <Router>
+      <div className="min-h-screen flex flex-col font-sans text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-deepNavy selection:bg-scienceBlue dark:selection:bg-bioCyan selection:text-white dark:selection:text-deepNavy transition-colors duration-300">
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -36,8 +28,8 @@ function App() {
           </Routes>
         </main>
       </div>
-    </HashRouter>
+    </Router>
   );
-}
+};
 
 export default App;

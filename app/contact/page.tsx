@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { VenueSection, Footer } from '../components/ConferenceSections';
+import { VenueSection, Footer } from '../../components/ConferenceSections.tsx';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const faqs = [
@@ -10,7 +10,7 @@ const faqs = [
     { q: "Is there a student discount?", a: "Yes, we offer significantly reduced rates for undergraduate and graduate students. A valid student ID is required at registration." },
 ];
 
-const Contact: React.FC = () => {
+export default function Contact() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     return (
@@ -91,6 +91,4 @@ const Contact: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default Contact;
+}

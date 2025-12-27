@@ -1,8 +1,8 @@
 import React from 'react';
-import { SubmissionFlow, Footer } from '../components/ConferenceSections';
+import { SubmissionFlow, Footer } from '../../components/ConferenceSections.tsx';
 import { Upload, FileText } from 'lucide-react';
 
-const Submission: React.FC = () => {
+export default function Submission() {
   return (
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-deepNavy transition-colors duration-300">
       <div className="container mx-auto px-6 mb-12">
@@ -77,6 +77,4 @@ const Submission: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default Submission;
+}

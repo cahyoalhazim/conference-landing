@@ -1,8 +1,8 @@
 import React from 'react';
-import { PricingSection, Footer } from '../components/ConferenceSections';
+import { PricingSection, Footer } from '../../components/ConferenceSections.tsx';
 import { CreditCard, Lock } from 'lucide-react';
 
-const Registration: React.FC = () => {
+export default function Registration() {
   return (
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-deepNavy transition-colors duration-300">
       <div className="container mx-auto px-6 mb-12">
@@ -52,6 +52,4 @@ const Registration: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default Registration;
+}

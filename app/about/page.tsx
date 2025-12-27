@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutSection, ScopesSection, Footer } from '../components/ConferenceSections';
+import { AboutSection, ScopesSection, Footer } from '../../components/ConferenceSections.tsx';
 
 const committee = [
     { role: "Conference Chair", name: "Prof. Dr. Rina Wijaya", affiliation: "Institut Teknologi Bandung" },
@@ -10,7 +10,7 @@ const committee = [
     { role: "Treasurer", name: "Dr. Anita Rahman", affiliation: "Universitas Padjadjaran" },
 ];
 
-const About: React.FC = () => {
+export default function About() {
   return (
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-deepNavy transition-colors duration-300">
       <div className="text-center py-10">
@@ -43,6 +43,4 @@ const About: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default About;
+}

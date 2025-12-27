@@ -1,5 +1,5 @@
 import React from 'react';
-import { SpeakersSection, Footer } from '../components/ConferenceSections';
+import { SpeakersSection, Footer } from '../../components/ConferenceSections.tsx';
 
 // Additional invited speakers data
 const invitedSpeakers = [
@@ -9,7 +9,7 @@ const invitedSpeakers = [
     { name: "Prof. David Chen", affiliation: "Tsinghua University, China", topic: "Synthetic Biology", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200" },
 ];
 
-const Speakers: React.FC = () => {
+export default function Speakers() {
   return (
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-deepNavy transition-colors duration-300">
       <div className="container mx-auto px-6 py-12 text-center">
@@ -55,6 +55,4 @@ const Speakers: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default Speakers;
+}

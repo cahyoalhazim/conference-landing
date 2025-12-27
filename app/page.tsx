@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero.tsx';
 import { 
   AboutSection, 
   ScopesSection, 
@@ -10,9 +10,9 @@ import {
   TargetAudienceSection,
   CallForPapersSection,
   SponsorsSection 
-} from '../components/ConferenceSections';
+} from '../components/ConferenceSections.tsx';
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <>
       <Hero />
@@ -32,6 +32,4 @@ const Home: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default Home;
+}

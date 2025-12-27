@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, MapPin, Search, PlayCircle, CheckCircle, FileText } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, FileText } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
                     <p className="text-sm text-slate-800 dark:text-white font-medium">12–15 September 2028</p>
                   </div>
                </div>
-               <a href="#submission" className="bg-scienceBlue hover:bg-blue-600 dark:hover:bg-bioCyan text-white px-8 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-scienceBlue/30">
+               <a href="/submission" className="bg-scienceBlue hover:bg-blue-600 dark:hover:bg-bioCyan text-white px-8 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-scienceBlue/30">
                   Submit Abstract
                   <ArrowRight size={18} />
                </a>

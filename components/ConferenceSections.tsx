@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Dna, Microscope, Activity, Boxes, 
-  Pill, FileText, CheckCircle, 
-  UserCheck, Send, Layers, Globe, Mail,
-  Twitter, Linkedin, Facebook, MapPin, Clock,
+  FileText, CheckCircle, 
+  Send, Layers, Globe, Mail,
+  MapPin, Clock,
   BookOpen, Award, Users, Download, Brain, Sprout
 } from 'lucide-react';
-import { Topic, TimelineEvent, Speaker, PricingTier } from '../types';
+import { Topic, TimelineEvent, Speaker, PricingTier } from '../types.ts';
 
 // --- DATA ---
 const topics: Topic[] = [
@@ -415,9 +416,9 @@ export const Footer: React.FC = () => (
         <div>
           <h4 className="font-bold mb-6 text-slate-900 dark:text-white">Quick Links</h4>
           <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li><a href="/about" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">About</a></li>
-            <li><a href="/speakers" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Confirmed Speakers</a></li>
-            <li><a href="/registration" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Registration</a></li>
+            <li><Link to="/about" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">About</Link></li>
+            <li><Link to="/speakers" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Confirmed Speakers</Link></li>
+            <li><Link to="/registration" className="hover:text-scienceBlue dark:hover:text-bioCyan transition-colors">Registration</Link></li>
           </ul>
         </div>
 

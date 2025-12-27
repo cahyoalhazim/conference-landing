@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Dna, Sun, Moon } from 'lucide-react';
-import { NavItem } from '../types';
+import { NavItem } from '../types.ts';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems: NavItem[] = [
@@ -15,7 +15,7 @@ const navItems: NavItem[] = [
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true); // Default to dark match HTML class
+  const [isDark, setIsDark] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -55,7 +55,6 @@ const Navbar: React.FC = () => {
     return location.pathname.startsWith(path);
   };
 
-  // Determine styling based on scroll and theme
   const getNavBackground = () => {
     if (isScrolled) {
       return 'bg-white/90 dark:bg-deepNavy/90 backdrop-blur-md shadow-lg border-b border-slate-200 dark:border-white/10';

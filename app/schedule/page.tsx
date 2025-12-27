@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimelineSection, Footer } from '../components/ConferenceSections';
+import { TimelineSection, Footer } from '../../components/ConferenceSections.tsx';
 import { Clock, MapPin } from 'lucide-react';
 
 const scheduleData = [
@@ -29,7 +29,7 @@ const scheduleData = [
     }
 ];
 
-const Schedule: React.FC = () => {
+export default function Schedule() {
   return (
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-deepNavy transition-colors duration-300">
         <div className="text-center py-10">
@@ -69,6 +69,4 @@ const Schedule: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default Schedule;
+}
